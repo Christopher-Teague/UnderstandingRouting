@@ -12,7 +12,7 @@ def dojo():
 @app.route('/say/<name>')
 def hello(name):
     print(name)
-    return "Hi " + name + "!"
+    return f"Hi {name}!"
 
 @app.route('/repeat/<number>/<input>')
 def repeat(number, input):
