@@ -14,12 +14,11 @@ def hello(name):
     print(name)
     return f"Hi {name}!"
 
-@app.route('/repeat/<number>/<input>')
+@app.route('/repeat/<int:number>/<input>')
 def repeat(number, input):
-    x = int(number)
-    print(int(number))
+    print(number)
     print(input)
-    return  input * x
+    return input * number
 
 if __name__=="__main__":
     app.run(debug=True)
