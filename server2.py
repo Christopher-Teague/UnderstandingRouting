@@ -17,7 +17,8 @@ def hello(name):
 @app.route('/repeat/<number>/<input>')
 def repeat(number, input):
     x = int(number)
-    print(input) * x
+    print(input)
+    return  input * x
 
 if __name__=="__main__":
     app.run(debug=True)
