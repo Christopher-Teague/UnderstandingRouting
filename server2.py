@@ -20,6 +20,11 @@ def repeat(number, input):
     print(input)
     return input * number
 
+@app.route('/<any>')
+def undefined(any):
+    print(any)
+    return "Sorry! No response. Try again."
+
 if __name__=="__main__":
     app.run(debug=True)
 
