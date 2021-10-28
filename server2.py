@@ -5,7 +5,7 @@ app = Flask(__name__)
 def hello_world():
     return "Hello World!"
 
-@app.route('/Dojo')
+@app.route('/dojo')
 def dojo():
     return "Dojo!"
 
@@ -20,9 +20,9 @@ def repeat(number, input):
     print(input)
     return input * number
 
-@app.route('/<any>')
-def undefined(any):
-    print(any)
+@app.route('/<path:u_path>')
+def catch_all(u_path):
+    print(u_path)
     return "Sorry! No response. Try again."
 
 if __name__=="__main__":
