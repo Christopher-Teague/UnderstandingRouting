@@ -9,12 +9,12 @@ def hello_world():
 def dojo():
     return "Dojo!"
 
-@app.route('/say/<name>')
+@app.route('/say/<string:name>')
 def hello(name):
     print(name)
     return f"Hi {name}!"
 
-@app.route('/repeat/<int:number>/<input>')
+@app.route('/repeat/<int:number>/<string:input>')
 def repeat(number, input):
     print(number)
     print(input)
